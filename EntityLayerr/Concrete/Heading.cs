@@ -12,5 +12,9 @@ namespace EntityLayerr.Concrete
         public string HeadingNmae { get; set; }
         public DateTime HeadingDate { get; set; }
 
+        public int CategoryID { get; set; } //ilişkili tablonun anahtar sütunuyula aynı isimde olmalı
+        public virtual Category Category { get; set; } 
+
+        public ICollection <Content> Contents { get; set; }
     }
 }
