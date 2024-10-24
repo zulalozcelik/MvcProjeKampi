@@ -13,7 +13,10 @@ namespace EntityLayerr.Concrete
         public DateTime HeadingDate { get; set; }
 
         public int CategoryID { get; set; } //ilişkili tablonun anahtar sütunuyula aynı isimde olmalı
-        public virtual Category Category { get; set; } 
+        public virtual Category Category { get; set; }
+
+        public int WriterID { get; set; }
+        public virtual Writer Writer { get; set; }
 
         public ICollection <Content> Contents { get; set; }
     }
