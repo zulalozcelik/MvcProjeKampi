@@ -52,11 +52,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Concrete\Context.cs" />
+    <Compile Include="Migrations\202411040824471_mig1.cs" />
+    <Compile Include="Migrations\202411040824471_mig1.Designer.cs">
+      <DependentUpon>202411040824471_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntityLayerr\EntityLayerr.csproj">
+      <Project>{8a63047c-c956-44a5-a2fc-5ecfbfed3fbc}</Project>
+      <Name>EntityLayerr</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202411040824471_mig1.resx">
+      <DependentUpon>202411040824471_mig1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
